@@ -1,5 +1,5 @@
-# Configure source server
-##### 使用mysql超级用户登陆mysql，执行一下命令
+# Configure source server(base GTID)
+##### 使用mysql超级用户登陆source mysql，执行以下命令
 ```
 # 安装clone插件
 INSTALL PLUGIN clone SONAME 'mysql_clone.so';
@@ -13,7 +13,8 @@ CREATE USER replica@'%' IDENTIFIED BY 'Faw1gt2wtikpuf597Hrw_';
 GRANT REPLICATION SLAVE,REPLICATION CLIENT  on *.* to replica@'%';
 ```
 
-# Configure replication server
+# Configure replication server(base GTID)
+##### 使用mysql超级用户登陆replication mysql，执行以下命令
 ```
 # 安装clone插件
 INSTALL PLUGIN clone SONAME 'mysql_clone.so';
