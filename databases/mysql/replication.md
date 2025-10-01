@@ -23,7 +23,7 @@ INSTALL PLUGIN clone SONAME 'mysql_clone.so';
 SET GLOBAL clone_valid_donor_list = '192.168.1.1:3306'
 
 # 克隆实例
-CLONE INSTANCE FROM 'clone'@'192.168.1.11':3306 IDENTIFIED BY 'kE6Qqg5Ga1ANh0+tCqfF';
+CLONE INSTANCE FROM 'clone'@'192.168.1.1':3306 IDENTIFIED BY 'kE6Qqg5Ga1ANh0+tCqfF';
 
 # 设置主从同步
 ## 8.4版本前
