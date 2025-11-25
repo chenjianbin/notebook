@@ -114,3 +114,9 @@ helm upgrade --install --namespace "ess" ess oci://ghcr.io/element-hq/ess-helm/m
 kubectl exec -n ess -it deploy/ess-matrix-authentication-service -- mas-cli manage register-user admin
 kubectl exec -n ess -it deployment/ess-matrix-authentication-service -- mas-cli manage promote-admin admin
 ```
+
+
+# Reference documents
+https://github.com/element-hq/ess-helm
+
+https://github.com/element-hq/ess-helm/blob/main/docs/advanced.md
