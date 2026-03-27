@@ -87,10 +87,16 @@ marzban core-update
 ### Install marzban node
 > 安装marzban node
 ```
+# CN2 节点
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban-node.sh)" @ install
 ufw allow 62050/tcp
 ufw allow 62051/tcp
 ufw allow 8082/tcp
+
+# 非CN2 节点
+ufw allow 62050/tcp
+ufw allow 62051/tcp
+ufw allow 1080/tcp
 ```
 > 升级xray-core，默认xray-core和太新的的xray-core，marzban兼容有问题
 ```
