@@ -3,6 +3,8 @@
 ```
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban.sh)" @ install
 marzban cli admin create --sudo
+#升级最新xray-core，默认xray-core 兼容有问题
+marzban-node core-update 
 ```
 
 > 登录marzban,设置配置
@@ -79,27 +81,22 @@ marzban cli admin create --sudo
 }
 
 ```
-> 升级xray-core，默认xray-core和太新的的xray-core，marzban兼容有问题
-```
-# 使用v25.8.3版本
-marzban core-update 
-```
+
 ### Install marzban node
 > 安装marzban node
 ```
-# CN2 节点
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban-node.sh)" @ install
-ufw allow 62050/tcp
-ufw allow 62051/tcp
+# CN2 节点
+ufw allow allow proto tcp <marzban master ip> to any port 62050
+ufw allow allow proto tcp <marzban master ip> to any port 62051
 ufw allow 8082/tcp
 
 # 非CN2 节点
-ufw allow 62050/tcp
-ufw allow 62051/tcp
+ufw allow allow proto tcp <marzban master ip> to any port 62050
+ufw allow allow proto tcp <marzban master ip> to any port 62051
 ufw allow 1080/tcp
-```
-> 升级xray-core，默认xray-core和太新的的xray-core，marzban兼容有问题
-```
-# 使用v25.8.3版本
+
+#升级最新xray-core，默认xray-core 兼容有问题
 marzban-node core-update 
 ```
+
