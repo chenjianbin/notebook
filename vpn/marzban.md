@@ -54,7 +54,7 @@ marzban-node core-update
     {
       "tag": "VLESS+TCP+REALITY+8082",
       "listen": "0.0.0.0",
-      "port": 8082,
+      "port": 56080,
       "protocol": "vless",
       "settings": {
         "clients": [],
@@ -69,8 +69,6 @@ marzban-node core-update
           "dest": "www.cloudflare.com:443",
           "xver": 0,
           "serverNames": [
-            "www.cloudflare.com",
-            "www.paypal.com",
             "www.aliexpress.com",
             "www.digitalocean.com",
             "www.vultr.com"
@@ -86,7 +84,7 @@ marzban-node core-update
     {
       "tag": "Shadowsocks TCP",
       "listen": "0.0.0.0",
-      "port": 1080,
+      "port": 43080,
       "protocol": "shadowsocks",
       "settings": {
         "clients": [],
