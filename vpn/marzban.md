@@ -11,7 +11,9 @@ marzban-node core-update
 ```
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "debug",
+    "access": "/var/lib/marzban-node/access.log",
+    "error": "/var/lib/marzban-node/error.log"
   },
   "routing": {
     "rules": [
@@ -21,6 +23,30 @@ marzban-node core-update
         ],
         "outboundTag": "BLOCK",
         "type": "field"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:aliyuncs.com",
+          "domain:alicdn.com",
+          "www.microsoft.com",
+          "domain:gstatic.com"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "BLOCK"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "BLOCK"
       }
     ]
   },
