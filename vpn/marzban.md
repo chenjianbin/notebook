@@ -111,13 +111,13 @@ marzban-node core-update
 ```
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban-node.sh)" @ install
 # CN2 节点
-ufw allow allow proto tcp <marzban master ip> to any port 62050
-ufw allow allow proto tcp <marzban master ip> to any port 62051
+ufw allow proto tcp from <marzban master ip> to any port 62050
+ufw allow proto tcp from <marzban master ip> to any port 62051
 ufw allow 56080/tcp
 
 # 非CN2 节点
-ufw allow allow proto tcp <marzban master ip> to any port 62050
-ufw allow allow proto tcp <marzban master ip> to any port 62051
+ufw allow proto tcp from <marzban master ip> to any port 62050
+ufw allow proto tcp from <marzban master ip> to any port 62051
 ufw allow 43080/tcp
 
 #升级最新xray-core，默认xray-core 兼容有问题
