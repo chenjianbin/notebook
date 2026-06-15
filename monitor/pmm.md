@@ -8,6 +8,7 @@ curl -fsSL https://www.percona.com/get/pmm | /bin/bash
 
 ### Add MySQL Monitoring User
 ```mysql
+# 登录数据库实例添加pmm监控用户
 CREATE USER 'pmm'@'%' IDENTIFIED BY 'UbET57qfzIaMkpwo';
 GRANT SELECT, PROCESS, REPLICATION CLIENT ON *.* TO 'pmm'@'%';
 ALTER USER 'pmm'@'%' WITH MAX_USER_CONNECTIONS 10;
