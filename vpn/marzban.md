@@ -4,7 +4,7 @@
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban.sh)" @ install
 marzban cli admin create --sudo
 #升级最新xray-core，默认xray-core 兼容有问题
-marzban-node core-update 
+marzban core-update 
 ```
 
 > 登录marzban,设置配置
