@@ -3,7 +3,7 @@
 ```
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban.sh)" @ install
 marzban cli admin create --sudo
-#升级最新xray-core，默认xray-core 兼容有问题
+#升级xray-core, 默认xray-core 兼容有问题, 使用v25.8.3版本
 marzban core-update 
 ```
 
@@ -12,8 +12,6 @@ marzban core-update
 {
   "log": {
     "loglevel": "debug",
-    "access": "/var/lib/marzban-node/access.log",
-    "error": "/var/lib/marzban-node/error.log"
   },
   "routing": {
     "rules": [
@@ -120,7 +118,7 @@ ufw allow proto tcp from <marzban master ip> to any port 62050
 ufw allow proto tcp from <marzban master ip> to any port 62051
 ufw allow 43080/tcp
 
-#升级最新xray-core，默认xray-core 兼容有问题
+#升级xray-core, 默认xray-core 兼容有问题, 使用v25.8.3版本
 marzban-node core-update 
 ```
 
