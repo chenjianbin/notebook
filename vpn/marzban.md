@@ -11,7 +11,7 @@ marzban core-update
 ```
 {
   "log": {
-    "loglevel": "debug",
+    "loglevel": "debug"
   },
   "routing": {
     "rules": [
@@ -67,7 +67,6 @@ marzban core-update
           "dest": "www.cloudflare.com:443",
           "xver": 0,
           "serverNames": [
-            "www.aliexpress.com",
             "www.digitalocean.com",
             "www.vultr.com"
           ],
