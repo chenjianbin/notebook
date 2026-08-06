@@ -1,0 +1,13 @@
+modules:
+  http_2xx:
+    http:
+      method: GET
+      valid_status_codes: []
+    prober: http
+    timeout: 5s
+  http_404:
+    prober: http
+    timeout: 5s
+    http:
+      valid_status_codes: [404]   # 只有返回 404 才算探测成功
+      method: GET
